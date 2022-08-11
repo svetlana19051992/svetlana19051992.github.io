@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />    
+    <title>Task 5-3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+    .header-box {
+        display: flex;
+        
+       
+    }    
+    .header {
+        width: 100px;
+        height: 50px;
+        background-color: lightgrey;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        box-sizing: border-box;
+        
+        border-right: 1px solid grey;
+        
+    }
+    .header:nth-child(1) {
+        border-left: 1px solid grey;
+    }
+
+    .tab-container input {
+        display: none;
+    }
+    .content {
+        display: none;
+    }
+  
+    .tab-container input:checked:nth-child(1) ~ .content-box .content:nth-child(1),
+    .tab-container input:checked:nth-child(2) ~ .content-box .content:nth-child(2),
+    .tab-container input:checked:nth-child(3) ~ .content-box .content:nth-child(3) {
+        display: block;
+    }
+    .tab-container input:checked:nth-child(1) ~ .header-box .header:nth-child(1),
+    .tab-container input:checked:nth-child(2) ~ .header-box .header:nth-child(2),
+    .tab-container input:checked:nth-child(3) ~ .header-box .header:nth-child(3) {
+        background-color: white;
+        border-top: 1px solid black;
+    }
+    
+
+</style>
+  </head>
+  <body>
+    <div class="tab-container">
+        <input type="radio" name="tab" id="tab1" checked>
+        <input type="radio" name="tab" id="tab2">
+        <input type="radio" name="tab" id="tab3">
+    
+        <div class="header-box">
+            <label for="tab1" class="header">TAB 1</label>
+            <label for="tab2" class="header">TAB 2</label>
+            <label for="tab3" class="header">TAB 3</label>
+        </div>
+    
+        <div class="content-box">
+            <div class="content">
+                <h2>Tab 1</h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic fugit natus voluptates, consequuntur quos quo cumque maxime cum incidunt autem deleniti? Impedit nisi blanditiis fugit veniam cumque officiis similique dicta!
+            </div>
+            <div class="content">
+                <h2>Tab 2</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rerum inventore dolor ab tenetur beatae autem perspiciatis. Necessitatibus distinctio iure inventore, architecto ullam et hic obcaecati aliquid impedit molestiae expedita.
+            </div>
+            <div class="content">
+                <h2>Tab 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus officia inventore, aliquid reprehenderit adipisci cumque velit maiores blanditiis. Nostrum accusantium quis soluta doloremque neque labore perferendis amet debitis itaque suscipit!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eum repudiandae, facilis cupiditate illo aspernatur odio veniam voluptatum quas quis. Magnam impedit iusto, quod alias hic rerum exercitationem accusantium accusamus!</p>
+            </div>
+        </div>
+    
+    </div>
+      
+
+
+  </body>
+</html>
