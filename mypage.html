@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />    
+    <title>Task 5-3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://kit.fontawesome.com/1bc8349cc8.js" crossorigin="anonymous"></script>
+    <style>
+     body {
+        margin: 0;
+        
+     } 
+     html {
+        scroll-behavior: smooth;
+     }  
+    .span-email {
+        display: inline-block;
+        line-height: 40px;
+       /* border: 1px solid red;*/
+       
+    }
+    .container {
+        width: 100%;
+     /*   height: 100vh;*/
+      /*  border: 1px solid red;*/
+      /*  overflow: scroll;      */  
+    }
+   
+    .email-href {
+        text-decoration: none;
+        line-height: 5vh;
+       
+        display: block;
+     
+        color: white;
+    
+      
+       /* border: 1px solid blue;*/
+    }
+    .span-email {
+        display: inline-block;
+        height: 4vh;
+        margin-bottom: 10px;
+    }
+ /*   .email {
+        display: none;
+       width: 150px;
+    }
+    .email:hover {
+        display: block;
+    }*/
+   /* .language  {
+        display: block;
+        width: 50px;
+        height: 30px;        
+    }*/
+    .language {
+        background-color: white;
+        border: 1px solid lightgrey;
+        
+    }
+    .language-label {
+        width: 138px;
+        height: 5vh;
+        
+        /*background-color: rgba(211, 211, 211, 0);*/
+        display: block;
+        padding-left: 5px;
+        line-height: 5vh; 
+        border: 1 px solid red;  
+    }
+    .checkbox {
+       display: none;  
+           
+    }
+    .checkbox:checked ~ label {
+        background-color: whitesmoke;
+    }
+    .checkbox:checked ~ .items {
+        display: block;         
+    }   
+    .items {
+        display: block;
+        
+        border: 1px solid whitesmoke;
+        width: 140px;
+        height: 10vh;
+        padding-left: 0;
+        display: none;
+        margin-top: 5px;
+    }
+    .item1, .item2 {
+        display: block;
+        width: 135px;
+        height: 5vh;        
+      /*  margin-top: 10px;*/
+        line-height: 40px;
+        padding-left: 5px;      
+    }
+    .item1:hover, .item2:hover {        
+        background-color: whitesmoke;
+    }    
+    li {
+        list-style-type: none;
+    }
+    .information {
+        display: flex;
+        height: 5vh;
+        margin-left: 10%;
+        color: white;
+        gap: 5px;
+        line-height: 40px;
+    }
+    .header1 {
+        display: flex;
+      /*  gap: 50%;*/
+        height: 5vh;
+        background-color: rgb(226, 157, 30);
+        
+    }
+    
+    .empty-element {
+        width: 50%;
+        background-color: rgb(226, 157, 30);
+        flex-shrink: 10;
+    }
+    .box-email {
+        margin-left: 20px;
+        display: flex;
+     /*   border: 1px solid aqua;*/
+        margin-bottom: 10px;
+    /*    line-height: 3vh;
+        margin-bottom: 5px;*/
+      /*  line-height: 5vh;*/
+    }
+    .icon1, .icon2 {
+        line-height: 5vh;
+      /*  border: 1px solid red;*/
+        display: inline-block;
+    }
+    .header2 {
+        height: 10vh;
+        display: flex;
+        gap:30%;
+    }    
+    .name-company {
+        font-size: 70px;
+        margin-left: 8%;
+    }
+    .directory {
+        display: flex;
+        gap: 20px;
+        font-size: 18px;
+        line-height: 15vh;
+        
+        
+    }
+    .href-dir1, .href-dir2, .href-dir3, .href-dir4 {
+        text-decoration: none;
+        color: grey;
+    }
+    .form-company {
+        color: rgb(226, 157, 30);
+        margin-left: 8%;
+        height: 3vh;
+        font-size: 14px;
+        padding-bottom: 10px;
+        
+    }
+    .img1 {
+        width: 70%;
+      /*  height: auto;*/
+        background-image: url('./image11.jpg');
+      /*  background-repeat: no-repeat;*/
+      background-size: cover;
+        
+    }
+    @keyframes myAnimation {
+        0% {
+            /*opacity: 0;*/
+            transform: translateY(100%);
+        }
+        100% {
+           /* opacity: 1;*/
+           transform: translateY(0);
+        }
+    }
+    .animation-container {
+       
+        margin: 80px;
+       /* border: 1px solid red;*/
+        animation: myAnimation 0.5s ease;
+    }
+   
+    .header-name-company {
+        font-size: 70px;
+        color: white;
+        font-weight: bold;
+        border-left: 8px solid rgb(226, 157, 30);
+        padding-left: 20px;
+    }
+    .header-content-company {
+        font-size: 25px;
+        color: white;
+        margin-top: 25px;
+        margin-bottom: 25px;
+       /* font-weight: bold;*/
+    }
+    .action-container {      
+        background-color: rgba(253, 251, 251, 0.5);
+        width: 80%;
+    }
+    .header-action {
+        font-size: 40px;
+        color: red;
+        padding: 20px;
+    }
+    .text-discount {
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    .animation-products {
+        background-color: rgb(226, 157, 30);
+     /*   color: white;
+        font-size: 20px;*/
+        display: inline-block;
+        padding: 20px;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+    .href-produrts-animation {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+       /* font-weight: bold;*/
+        white-space: 10px;
+        letter-spacing: 5px;
+    }
+    .content1 {
+        width: 30%;
+     /*   height: 120vh;*/
+        background-color: rgb(226, 157, 30);
+        animation: myAnimation 0.5s ease;
+    }
+    .box-front {
+        display: flex;
+    }
+    .header3 {
+        padding: 40px 20px 20px 40px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .font-bold {
+        font-weight: bold;
+    }
+    .icon {
+        font-size: 60px;
+        color: white;
+    }
+    .icon3 {
+        font-size: 40px;
+    }
+    .benefit {
+        padding: 10px 30px 20px 30px;
+        display: flex;
+       
+    }
+    .content-benefit {
+        color: white;
+        margin-top: 20px;
+      
+    }
+    .box-works {
+        margin-left: 20px;
+        font-size: 18px;
+       
+    }
+    .question-manager {
+        padding: 40px 0;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .href-question-box:hover {
+        background-color: rgb(226, 157, 30);        
+    }
+    .href-question-box:hover > .href-question {        
+        color: white;
+    }
+    .href-question {
+        text-decoration: none;
+        color: rgb(226, 157, 30);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    .href-question-box {
+        border: 5px solid rgb(226, 157, 30);
+        padding: 15px;
+        margin: 40px 0;
+        
+    }
+    .question-container {
+        display: flex;
+        padding: 0 10%;
+        justify-content: space-between;
+    }
+    .activity-company-box {
+        display: flex;
+    }
+    .activity-company {
+        width: 50%;
+        padding: 0 7% 0 4%;
+    }
+    .img2 {
+        width: 50%;
+        background-image: url('./image13.jpg');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-bottom: 30px;
+    }
+    .header-activity {
+        font-size: 40px;
+        padding: 35px 0 20px 0;
+        font-weight: bold;
+    }
+    .line {
+        width: 50px;
+        height: 5px;
+        background-color: lightskyblue;
+    }
+    .activity-company  p {
+        font-size: 20px;
+    }
+    .orders-month, .orders-year {
+        display: inline-block;
+        width: 33%;
+    }
+    .orders-month {
+        background-color: rgb(226, 157, 30);        
+    }
+    .orders-year {
+        background-color: black;
+        color: white;        
+    }
+    .count, .count-orders, .order-empty {
+        display: block;
+        text-align: center;
+      /*  padding: 25px 0 10px;*/
+    }
+    .count {
+        font-size: 70px;
+        padding-top: 25px;
+        font-weight: bold;
+        
+      /*  border: 1px solid red;*/
+    }
+    .count-orders {
+        font-size: 20px;
+        padding-bottom: 15px;
+        font-weight: bold;
+       /* border: 1px solid red;*/
+    }
+    .order-empty {
+        background-color: black;
+        width: 34%;
+        height: 150px;
+        
+    }
+    .orders-box {
+        display: flex;        
+    }
+    .href-company-box:hover {
+        background-color: black;        
+    }
+    .href-company-box:hover > .href-company {        
+        color: white;
+    }
+    .href-company {
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+    }
+    .href-company-box {
+        border: 5px solid black;
+        padding: 15px;
+        margin-left: 55%;
+        text-align: center;
+        word-spacing: 10px;
+        letter-spacing: 5px;
+        
+    }
+    .carousel-container {
+        width: 100%;
+        background-color:rgb(250, 251, 252);
+        padding-bottom: 50px;
+    }
+    .header-products {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 25px;
+        padding: 25px;
+        font-weight: bold;
+        
+    }
+    .line1 {
+        margin-left: calc(50% - 25px);
+        margin-bottom: 10px;
+    }
+    .slider {
+            list-style-type: none;
+        }
+
+        .slider img {
+            width: 800px;
+            object-fit: cover;
+            height: 80vh;
+        }
+
+        .sliders-wrapper {
+            display: flex;
+            gap: 10px;
+            padding: 0;
+            transition: transform 300ms ease-in;
+        }
+
+        .carousel {
+            width: 800px;
+            padding: 0 25px;
+            position: relative;
+            margin: auto;
+            
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+        }
+
+        .button-prev, .button-next {
+            position: absolute;
+            top: 50%;
+            color: lightskyblue;
+            font-size: 40px;
+            transform: translateY(-50%);  
+                     
+        }
+
+        .button-prev {
+            left: -5px;
+        }
+
+        .button-next {
+            right: -5px;
+        }
+        .connection-container {
+            display: flex;
+          /*  margin-top: 50px;*/
+        }
+        .header-connection {
+            font-size: 40px;
+            font-weight: bold;
+            padding: 25px 0;
+        }
+        .connection-form {
+            padding: 25px 5% 100px 5%;
+            background-color: rgb(226, 157, 30);
+            width: 50%;
+           
+        }
+        .line2 {
+            background-color: black;
+            margin-bottom: 35px;
+        }
+        .input-form {
+            display: inline-block;
+            height: 8vh;
+            width: 45%; 
+            padding-left: 15px;           
+        }
+        .input-name {
+            margin-right: 5px;
+        }
+        .contact {
+            width: 50%;           
+            display: block;           
+        }
+        .contact-media {           
+            height: 20vh;           
+            background-color: black;
+        }
+        .message {
+            display: block;
+            width: 93%;
+            height: 25vh;
+            margin-top: 10px;
+            padding: 15px;
+
+        }
+        .button-message {
+            padding: 15px;
+            border-radius: none;
+            margin-top: 10px;
+            display: block;
+            background-color: rgb(226, 157, 30);
+            color: white;
+            border: 5px solid white;
+            margin-left: 73%;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        .button-message:hover {
+            background-color: rgb(139, 96, 14);
+            border: 5px solid rgb(226, 157, 30);
+        }
+        .contact-container {
+            padding: 70px 80px 20px 80px;
+        }
+        .icon-contact {
+            margin-right: 20px;
+            margin-bottom: 0px;
+           /* border: 1px solid red;*/
+            line-height: 20px;
+           
+        }
+        .contact-info {
+            padding-bottom: 30px;
+        }
+        .text-adress {
+            padding-left: 45px;
+        }
+        .contact-inform {
+            margin-top: 35px ;
+        }
+</style>
+  </head>
+  <body>
+    <div class="container">
+        <div>
+            <div class="header1">
+                <div class="information">
+                    <span class="material-symbols-outlined icon1">
+                    call
+                    </span>
+                    <span>+375 29 349 11 11</span>
+                    <div class="box-email">
+                        
+                        <a href="mailto:ssk-minsk@yandex.ru" class="email-href"><span class="material-symbols-outlined icon2">
+                            mail
+                            </span><span class="span-email">ssk-minsk@yandex.ru</span></a>
+                    </div>
+                </div>
+                <div class="empty-element"></div>
+                <div class="language">                 
+                    <input class="checkbox" type="checkbox" name="checkbox" id="language">
+                    <label class="language-label" for="language">Russian</label>                
+                <ul class="items">
+                    <li class="item1" onclick="translateEl('ru')">russian</li>
+                    <li class="item2" onclick="translateEl('en')">english</li>
+                </ul>  
+                </div>
+            </div>
+            <div class="header2">
+                <div class="name-company"><b>RUVAL</b></div>
+                <div class="directory">
+                    <a  class="href-dir1" href="" data-translate="home">Главная</a>
+                    <a class="href-dir2" href="#part1" data-translate="aboutCompany">О компании</a>
+                    <a class="href-dir3" href="#part2" data-translate="products">Продукция</a>
+                    <a class="href-dir4" href="#part3" data-translate="contacts">Контакты</a>
+                </div>                
+            </div>
+            <div class="form-company" data-translate="constructionAnd">строительно-производственная компания</div>
+            <div class="box-front">
+                <div class="img1">
+                    <div class="animation-container">
+                        <div class="header-name-company">Ruval</div>
+                        <div class="header-content-company" data-translate="weOffer">Мы предлагаем нашим клиентам стандартизированные изделия  из металла теплицы, беседки, пристройки, навесы, гаражи, складские и коммерческие помещения, а так же изделия по индивидуальным проектам.</div>
+                        <div class="action-container">
+                            <div class="header-action" data-translate="action">Акция</div>
+                            <div class="text-discount" data-translate="upTo">Скидка до 50% до 1.09.22г .На все металлоконструкции!!!</div>
+                            
+                        </div>
+                        <div class="animation-products"><a class="href-produrts-animation" href="#part2" data-translate="ourProduction">НАША ПРОДУКЦИЯ</a></div>
+                    </div>
+                </div>
+                <div class="content1">
+                    <div class="header3" data-translate="benefits">Преимущества </div>                                               
+             
+                    <div class="benefit"><i class="fa-regular fa-building icon"></i>
+                        <div class="box-works">
+                            <div data-translate="mountingSpeed" class="font-bold">Скорость монтажа</div>
+                            <div class="content-benefit" data-translate="productionOfWorks">Производство работ в любое время года.</div>
+                        </div>   
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-cubes-stacked icon"></i>
+                        <div class="box-works">
+                            <div data-translate="lowCost" class="font-bold">Низкая стоимость</div>
+                            <div class="content-benefit" data-translate="noProductionWaste">Отсутствие отходов производства, нет необходимости утилизировать остатки. Возможны нестандартные конструкции, надстройки и пристройки.</div>
+                        </div>   
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-truck icon icon3"></i>
+                        <div class="box-works">
+                            <div data-translate="easeOfInstallation" class="font-bold">Легкость монтажа</div>
+                            <div class="content-benefit" data-translate="doesNotRequire">Не требует привлечение дополнительной техники для монтажа. Возможность сборки собственными силами.</div>
+                        </div>   
+                    </div>
+                    <div class="benefit"><i class="fa-solid fa-cubes-stacked icon"></i>
+                        <div class="box-works">
+                            <div data-translate="home" data-translate="durability" class="font-bold">Долговечность</div>
+                            <div class="content-benefit" data-translate="noAdditional">Не требуется дополнительной защиты, в отличие от деревянных каркасных домов.</div>
+                        </div>   
+                    </div>               
+                 
+                </div>                
+            </div>
+            <div class="question-container">
+                <div class="question-manager" data-translate="askTheQuestion">Задать вопрос менеджеру</div>
+                <div class="href-question-box"><a class="href-question" href="#part3" data-translate="send">О Т П Р А В И Т Ь</a></div>
+            </div>
+            <div class="activity-company-box">            
+                <div class="img2">
+                    <div class="orders-box">
+                        <div class="orders-month">
+                            
+                                <span class="count">106</span>
+                                <span class="count-orders" data-translate="ordersPerMonth">заказов в месяц</span>
+                            
+                        </div>
+                        <div class="orders-year">
+                            
+                                <span class="count">1108</span>
+                                <span class="count-orders" data-translate="ordersPerYear">заказов в год</span>
+                            
+                        </div>
+                        <div class="order-empty"></div>
+                    </div>
+                </div>
+
+                    <div class="activity-company">
+                        <div class="header-activity" id="part1"  data-translate="aboutCompany">О компании</div>
+                        <div class="line"></div>
+                        <p  data-translate="isEnActively">ООО «РУВАЛ-Проект» это активно развивающаяся молодая компания, которая специализируется на промышленных объектах строительства. Комплекс оказываемых услуг, начинается от подготовки котлована и заканчивается на окончательном благоустройстве и озеленении прилегающей территории.</p>
+                        <p  data-translate="hasAWell">ООО «РУВАЛ-Проект» имеет отлаженную четкую система управления и контроля производственными и снабженческими процессами как на территории Республики Беларусь, так и на территории Российской Федерации, что позволяет минимизировать затраты и предложить конкурентную цену Заказчикам. Четко налаженная структура значительно упрощает взаимодействие и повышает эффективность при работе на возводимых объектах, позволяя существенно сокращать стоимость и сроки строительно-монтажных работ.</p>
+                        <p  data-translate="ourSpecialists">Наши специалисты готовы качественно и в срок доставить конструкции, а после смонтировать под ключ, прямо у Вас на строительной площадке.</p>
+                        <div class="href-company-box"><a class="href-company" href="#part2"  data-translate="toLearnMore">УЗНАТЬ БОЛЬШЕ</a></div>
+                    </div>
+                        
+            </div>
+            <div class="carousel-container"> 
+                <div class="header-products" id="part2"  data-translate="products">Продукция</div>
+                <div class="line1 line"></div>
+            
+                <div class="carousel">
+                    <span class="button-prev" onclick="goToPrev()"> < </span>
+                    <div class="carousel-wrapper">
+                        <ul class="sliders-wrapper">
+                            <li class="slider">
+                                <img src="./img1.jpg" alt="">                                 
+                            </li>
+                            <li class="slider">
+                                <img src="./img2.jpg" alt="">
+                            </li>
+                            <li class="slider">
+                                <img src="./img3.jpg" alt="">
+                            </li>
+                            <li class="slider">
+                                <img src="./img4.jpg" alt="">                                 
+                            </li>
+                            <li class="slider">
+                                <img src="./img5.jpg" alt="">
+                            </li>
+                            <li class="slider">
+                                <img src="./img6.jpg" alt="">
+                            </li>
+                            <li class="slider">
+                                <img src="./img7.jpg" alt="">
+                            </li>
+                            <li class="slider">
+                                <img src="./img8.jpg" alt="">                                 
+                            </li>
+                            <li class="slider">
+                                <img src="./img9.jpg" alt="">
+                            </li>
+                            <li class="slider">
+                                <img src="./img10.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <span class="button-next" onclick="goToNext()"> > </span>
+                </div>
+            </div>
+            <div class="connection-container">
+                <div class="connection-form">
+                    <div class="header-connection" id="part3"  data-translate="connectWithUs">Связаться с нами</div>
+                    <div class="line line2"></div>
+                    <form action="" method="post">
+                        <label class="your-name-label" for="your-name-label"></label>
+                        <input type="text" class="input-name input-form" name="your-name" id="your-name-label" placeholder="Имя">
+                        <label class="telefon-label" for="telefon-label"></label>
+                        <input type="text" class="telefon-input input-form" name="telefon-input" id="telefon-label" placeholder="Телефон">
+                        <textarea name="message" class="message" placeholder="Сообщение"></textarea> 
+                        <button class="button-message"  data-translate="send">О Т П Р А В И Т Ь</button>
+                    </form>
+                </div>
+                <div class="contact">
+                    <div class="contact-media"></div>
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <span class="material-symbols-outlined icon-contact">
+                            location_on
+                            </span>
+                            <b  data-translate="republicOfBelarus">Республика Беларусь 220099, г.Минск, ул. Казинца, 
+                            <span class="text-adress"  data-translate="room">11а, каб.112а</span></b>
+                        </div> 
+                            <div class="contact-info"><span class="material-symbols-outlined icon-contact">
+                                call
+                                </span><b>+375 29 349 11 11</b></div>
+                                <div class="contact-info"><span class="material-symbols-outlined icon-contact">
+                                    mail
+                                    </span><b>ruvalproject@gmail.com</b></div> 
+                                    <div class="contact-info contact-inform" data-translate="limitedLiability"><b>Общество с ограниченной ответственностью «Рувал-проект»</b></div>
+                                    <div class="contact-info" data-translate="republicOfBelarusMinsk">Республика Беларусь, г. Минск, ул. Казинца, 11а, каб. 112а.</div>
+                                    <div class="contact-info">УНП 193545350, ЗАО «Альфа-банк», р/с BY26 ALFA 3012 2A10 3300 1027 0000</div>
+                                    <div class="contact-info">BIC: ALFABY2X</div>   
+                    </div>
+                </div>  
+            </div>
+            
+            <script>
+                const slidersWrapper = document.querySelector('.sliders-wrapper')
+                let currentSlideIndex = 0;
+                const slideWidth = 800 + 10;
+            
+                function goToNext() {
+                    currentSlideIndex++;
+                    const offset = -currentSlideIndex * slideWidth;
+                    slidersWrapper.style.transform = `translateX(${offset}px)`
+                }
+            
+            
+                function goToPrev() {
+                    currentSlideIndex--;
+                    const offset = -currentSlideIndex * slideWidth;
+                    slidersWrapper.style.transform = `translateX(${offset}px)`
+                }
+            </script>
+            <script src="en.js"></script>
+            <script src="ru.js"></script>
+            <script>
+            const allLang = {
+                'ru': ru,
+                'en': en,
+            }
+            const langName = localStorage.getItem('currentLang') || 'en';
+            translateEl(langName);
+        
+            function translateEl(lang = 'en') {
+                console.log(lang);
+                const currentLang = allLang[lang];
+                localStorage.setItem('currentLang', lang);
+                const elements = document.querySelectorAll('[data-translate]')
+                for (let element of elements) {
+                    // const key = element.dataset.translate;
+                    const key = element.getAttribute('data-translate')
+                    const translatedValue = currentLang[key];
+                    element.textContent = translatedValue;
+                }
+            } 
+            </script>
+        </div>
+        <i class="fa buildings" aria-hidden="true"></i>    
+</div>
+  </body>
+</html>
